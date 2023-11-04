@@ -182,8 +182,8 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 0.4s ease-in-out;
-  filter: grayscale(100%);
+  /* Remove the filter property to show the image in color initially */
+  /* filter: grayscale(100%); */
 }
 .header-content .left-header .image img:hover {
   filter: grayscale(0);
@@ -274,7 +274,7 @@ section {
 }
 .about-stats .progress-bars {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
 }
 .about-stats .progress-bars .progress-bar {
@@ -284,6 +284,7 @@ section {
 .about-stats .progress-bars .progress-bar .prog-title {
   text-transform: uppercase;
   font-weight: 500;
+  color: var(--color-secondary);
 }
 .about-stats .progress-bars .progress-bar .progress-con {
   display: flex;
@@ -485,11 +486,7 @@ section {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease-in-out;
 }
-.blogs .blog:hover {
-  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
-  transform: translateY(-5px);
-  transition: all 0.4s ease-in-out;
-}
+
 .blogs .blog:hover img {
   filter: grayscale(0);
   transform: scale(1.1);
@@ -498,10 +495,9 @@ section {
 .blogs .blog img {
   width: 100%;
   height: 300px;
-  object-fit:fill;
+  object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  filter: grayscale(100%);
   transition: all 0.4s ease-in-out;
 }
 .blogs .blog .blog-text {
@@ -725,10 +721,14 @@ section {
     padding-top: 3rem;
   }
 
-  .header-content .left-header .image {
-    margin: 0 auto;
-    width: 90%;
-  }
+.header-content .left-header .image {
+  border-radius: var(--br-sm-2);
+  height: 90%;
+  width: 68%;
+  margin-left: 4rem;
+  background-color: var(--color-black);
+  transition: all 0.4s ease-in-out;
+}
 
   .controls {
     top: auto;
@@ -959,6 +959,12 @@ section {
   .main-title h2 .bg-text {
     font-size: 4rem;
   }
+}
+
+.competencies li::before {
+  content: "\2022"; /* Unicode character for a bullet point */
+  margin-right: 5px;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=styles.css.map */
