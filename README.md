@@ -14,5 +14,4 @@ Feel free to explore the website to learn more about my projects and skills. You
 ## Contact
 If you have any questions or would like to get in touch, you can reach me via email at khalifa.serraye@gmail.com.
 
-
 Thank you for visiting my portfolio website!
